@@ -12,3 +12,23 @@ CREATE TABLE animals (
 );
 
  ALTER TABLE animals ADD species varchar(100)
+
+ CREATE TABLE owners (
+    id BIGSERIAL PRIMARY KEY ,
+    full_name VARCHAR(100),
+    age INT
+);
+
+CREATE TABLE species (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR
+);
+
+ ALTER TABLE animals
+   DROP COLUMN species;
+
+ALTER TABLE animals
+ADD COLUMN species_id  INT references species(id);
+
+ALTER TABLE animals
+ADD COLUMN owner_id INT references owners(id);
