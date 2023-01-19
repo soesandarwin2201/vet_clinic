@@ -53,8 +53,8 @@ FROM animals
 JOIN species ON species.id = animals.species_id 
 WHERE species.name = 'Pokemon';
 SELECT owners.full_name ,animals.name
-FROM animals
-RIGHT JOIN owners ON owners.id = animals.owner_id;
+FROM owners
+RIGHT JOIN animals ON owners.id = animals.owner_id;
 SELECT species.name, COUNT(*)
 FROM animals
 JOIN species ON animals.species_id = species.id
