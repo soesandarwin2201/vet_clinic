@@ -49,6 +49,12 @@ VALUES('Stephanie Mendex',64,'1981-05-04');
 INSERT INTO vets(name,age,date_of_graduation)
 VALUES('Jack Harkness',38,'2008-06-08');
 
+INSERT INTO specializations(species_id, vets_id) VALUES
+  (1, 1),
+  (1, 3),
+  (2, 3),
+  (2, 4);
+
 INSERT INTO visits(animals_id,vets_id, date_of_visit) VALUES
     (1, 1, '2020-05-24'),
     (1, 3, '2020-07-22'),
