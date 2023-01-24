@@ -16,7 +16,8 @@ CREATE TABLE animals (
  CREATE TABLE owners (
     id BIGSERIAL PRIMARY KEY ,
     full_name VARCHAR(100),
-    age INT
+    age INT,
+    email VARCHAR(120)
 );
 
 CREATE TABLE species (
@@ -32,6 +33,10 @@ ADD COLUMN species_id  INT references species(id);
 
 ALTER TABLE animals
 ADD COLUMN owner_id INT references owners(id);
+CREATE INDEX animals_index ON visits(animals_id);
+CREATE INDEX vets_index ON visits(vets_id);
+CREATE INDEX owners_index ON owners(email);
+
 
 create table vets(
   id bigint generated always as identity primary key,
@@ -56,3 +61,5 @@ create table visits(
   constraint animals_id foreign key(animals_id) references animals(id),
   constraint vets_id foreign key(vets_id) references vets(id)
 );
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
