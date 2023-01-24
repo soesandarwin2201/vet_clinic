@@ -75,9 +75,7 @@ GROUP BY (owners.full_name)
 ORDER BY count DESC
 LIMIT 1;
 
-explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
-explain analyze SELECT * FROM visits where vet_id = 2;
-explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
+
 SELECT animals.name,vets.name,visits.date_of_visit FROM visits JOIN vets ON vets.id = visits.vets_id JOIN animals ON animals.id=visits.animals_id WHERE vets.name = 'Wlliam' ORDER BY date_of_visit desc LIMIT 1;
 
 SELECT COUNT(*) FROM visits JOIN vets ON vets.id = visits.vets_id WHERE vets.name = 'Stephanie Mendex';
@@ -94,4 +92,8 @@ SELECT COUNT(vets.name) FROM visits INNER JOIN vets ON visits.vets_id = vets.id 
 WHERE specializations.species_id is NULL);
 
 SELECT species.name FROM species JOIN animals ON animals.species_id = species.id JOIN visits ON visits.animals_id = animals.id JOIN vets ON vets.id = visits.vets_id WHERE vets.name = 'Maisy Smith' GROUP BY vets.name, species.name ORDER BY count(species.name) DESC LIMIT 1;
+
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
+explain analyze SELECT * FROM visits where vet_id = 2;
+explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
 

@@ -40,7 +40,6 @@ UPDATE animals SET owner_id = 3 WHERE name IN ('Devimon','Plantmon');
 UPDATE animals SET owner_id = 4 WHERE name IN ('Charmander','Squirtle','Blossom');
 UPDATE animals SET owner_id = 5 WHERE name = 'Angemon' OR name = 'Boarmon';
 
-insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
 INSERT INTO vets(name,age,date_of_graduation)
 VALUES('Wlliam',45,'2000-04-23');
 INSERT INTO vets(name,age,date_of_graduation)
@@ -78,3 +77,4 @@ INSERT INTO visits(animals_id,vets_id, date_of_visit) VALUES
     (10, 3, '2020-05-24'),
     (10, 1, '2021-01-11');
 
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';

@@ -16,7 +16,8 @@ CREATE TABLE animals (
  CREATE TABLE owners (
     id BIGSERIAL PRIMARY KEY ,
     full_name VARCHAR(100),
-    age INT
+    age INT,
+    email VARCHAR(120)
 );
 
 CREATE TABLE species (
