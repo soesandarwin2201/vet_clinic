@@ -62,3 +62,4 @@ create table visits(
   constraint vets_id foreign key(vets_id) references vets(id)
 );
 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
