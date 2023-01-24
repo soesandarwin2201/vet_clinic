@@ -32,3 +32,6 @@ ADD COLUMN species_id  INT references species(id);
 
 ALTER TABLE animals
 ADD COLUMN owner_id INT references owners(id);
+CREATE INDEX animals_index ON visits(animals_id);
+CREATE INDEX vets_index ON visits(vets_id);
+CREATE INDEX owners_index ON owners(email);
