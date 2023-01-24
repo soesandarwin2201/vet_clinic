@@ -35,3 +35,29 @@ ADD COLUMN owner_id INT references owners(id);
 CREATE INDEX animals_index ON visits(animals_id);
 CREATE INDEX vets_index ON visits(vets_id);
 CREATE INDEX owners_index ON owners(email);
+
+
+create table vets(
+  id bigint generated always as identity primary key,
+  name varchar(100),
+  age integer,
+  date_of_graduation DATE
+);
+
+create table specializations(
+  species_id integer NOT NULL,
+  vets_id integer NOT NULL,
+  primary key(species_id, vets_id),
+  constraint species_id foreign key(species_id) references species(id),
+  constraint vets_id foreign key(species_id) references vets(id)
+);
+
+create table visits(
+  animals_id integer NOT NULL,
+  vets_id integer NOT NULL,
+  date_of_visit DATE,
+  primary key(animals_id, vets_id, date_of_visit),
+  constraint animals_id foreign key(animals_id) references animals(id),
+  constraint vets_id foreign key(vets_id) references vets(id)
+);
+
