@@ -88,6 +88,8 @@ After you're finished please remove all the comments and instructions!
 
 To get a local copy up and running, follow these steps.
 
+![FireShot Capture 039 - vet_clinic - DrawSQL - drawsql app](https://user-images.githubusercontent.com/111097127/214505515-21158a1f-ebb7-496b-9071-799972d2a1d8.png)
+
 
 <!--
 Example command:
