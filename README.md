@@ -47,6 +47,7 @@ After you're finished please remove all the comments and instructions!
 >This is a simple vet clinic databse project.
 
 **[vet clinic]** is a simple database for the vets.
+![FireShot Capture 039 - vet_clinic - DrawSQL - drawsql app](https://user-images.githubusercontent.com/111097127/214505515-21158a1f-ebb7-496b-9071-799972d2a1d8.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -88,7 +89,7 @@ After you're finished please remove all the comments and instructions!
 
 To get a local copy up and running, follow these steps.
 
-![FireShot Capture 039 - vet_clinic - DrawSQL - drawsql app](https://user-images.githubusercontent.com/111097127/214505515-21158a1f-ebb7-496b-9071-799972d2a1d8.png)
+
 
 
 <!--
